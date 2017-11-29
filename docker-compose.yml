@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  unity-cacheserver:
+    image: unity-cacheserver
+    build: .
+    ports:
+      - 8126:8126
