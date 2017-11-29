@@ -1,8 +1,22 @@
 version: '2.1'
 
+volumes:
+  unity-cacheserver-data:
+
 services:
   unity-cacheserver:
-    image: unity-cacheserver
-    build: .
+    container_name: unity-cacheserver
+    image: garyritchie/unity-cacheserver:2017.2.0f3
+    build: 
+      context: .
+      args:
+        VERSION: 2017.2.0f3
+        UCPATH: https://netstorage.unity3d.com/unity/46dda1414e51/
     ports:
-      - 8126:8126
+      - 8125:8125
+      # - 8126:8126
+    command: --nolegacy
+    volumes:
+      - unity-cacheserver-data:/cache5.0
+      - unity-cacheserver-data:/cache
+      - /etc/timezone:/etc/timezone:ro
