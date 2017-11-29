@@ -1,7 +1,7 @@
 FROM ubuntu:17.04
 MAINTAINER Gary Ritchie <gary@garyritchie.com>
-ARG VERSION=2017.1.1f1
-ARG UCPATH=https://download.unity3d.com/download_unity/5d30cf096e79/
+ARG VERSION=2017.2.0f3
+ARG UCPATH=https://netstorage.unity3d.com/unity/46dda1414e51/
 LABEL Name=unity-cacheserver Version=${VERSION}
 
 RUN apt update \

@@ -6,12 +6,12 @@ volumes:
 services:
   unity-cacheserver:
     container_name: unity-cacheserver
-    image: garyritchie/unity-cacheserver:2017.2.0f3
+    image: garyritchie/unity-cacheserver:2017.1.1f1
     build: 
       context: .
       args:
-        VERSION: 2017.2.0f3
-        UCPATH: https://netstorage.unity3d.com/unity/46dda1414e51/
+        VERSION: 2017.1.1f1
+        UCPATH: https://download.unity3d.com/download_unity/5d30cf096e79/
     ports:
       - 8125:8125
       # - 8126:8126
