@@ -7,14 +7,14 @@ services:
   unity-cacheserver:
     container_name: unity-cacheserver
     image: garyritchie/unity-cacheserver:2017.1.1f1
-    build: 
-      context: .
-      args:
-        VERSION: 2017.1.1f1
-        UCPATH: https://download.unity3d.com/download_unity/5d30cf096e79/
+    # build: 
+    #   context: .
+    #   args:
+    #     VERSION: 2017.1.1f1
+    #     UCPATH: https://download.unity3d.com/download_unity/5d30cf096e79/
     ports:
-      - 8125:8125
-      # - 8126:8126
+      #- 8125:8125
+      - 8126:8126
     command: --nolegacy
     volumes:
       - unity-cacheserver-data:/cache5.0
