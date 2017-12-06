@@ -5,6 +5,7 @@ volumes:
 
 services:
   unity-cacheserver:
+    restart: always
     container_name: unity-cacheserver
     image: garyritchie/unity-cacheserver:2017.1.1f1
     # build: 
